@@ -1,0 +1,18 @@
+body {
+    font-family: Arial;
+    background-color: lightgreen;
+}
+
+.red {
+    background-color: lightcoral;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
