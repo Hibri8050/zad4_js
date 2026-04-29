@@ -24,7 +24,15 @@
 
 <section>
     <h2>Kontakt</h2>
-    
+    <form id="contactForm">
+        <input type="text" id="userName" placeholder="Imię" required>
+        <input type="text" id="userSurname" placeholder="Nazwisko" required>
+        <input type="email" id="userEmail" placeholder="Email" required>
+        <textarea id="userMessage" placeholder="Wiadomość" required></textarea>
+        <button type="submit">Wyślij</button>
+    </form>
+    <div id="validationMessage" style="margin-top: 10px; font-weight: bold;"></div>
+</section>
     <p>Email: 
         <a href="mailto:ddatsen1@stu.vistula.edu.pl">ddatsen1@stu.vistula.edu.pl</a>
     </p>
