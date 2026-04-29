@@ -42,3 +42,24 @@ img {
     height: auto;
     border-radius: 10px;
 }
+#contactForm input, #contactForm textarea {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#contactForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.error-text {
+    color: #d9534f;
+}
+
+.success-text {
+    color: #5cb85c;
+}
