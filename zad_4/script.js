@@ -1,25 +1,29 @@
-let isGreen = true;
 
-function changeTheme() {
-    const body = document.getElementById("body");
+const themeBtn = document.getElementById('themeButton');
+const toggleBtn = document.getElementById('toggleBtn');
 
-    if (isGreen) {
-        body.classList.remove("green");
-        body.classList.add("red");
+
+const sections = document.querySelectorAll('section');
+const targetSection = sections[5]; 
+
+
+themeBtn.addEventListener('click', () => {
+    if (!document.body.classList.contains('green-theme') && !document.body.classList.contains('red-theme')) {
+        // Если нет тем — включаем зеленую
+        document.body.classList.add('green-theme');
+    } else if (document.body.classList.contains('green-theme')) {
+        // Если зеленая — меняем на красную
+        document.body.classList.remove('green-theme');
+        document.body.classList.add('red-theme');
     } else {
-        body.classList.remove("red");
-        body.classList.add("green");
+        // Если красная — возвращаемся к стандарту
+        document.body.classList.remove('red-theme');
     }
+    console.log("Styl strony został zaktualizowany");
+});
 
-    isGreen = !isGreen;
-}
 
-function toggleSkills() {
-    const section = document.getElementById("skills");
-
-    if (section.style.display === "none") {
-        section.style.display = "block";
-    } else {
-        section.style.display = "none";
-    }
-}
+toggleBtn.addEventListener('click', () => {
+    targetSection.classList.toggle('hidden');
+    console.log("Widoczność sekcji zmieniona");
+});
